@@ -1,15 +1,11 @@
 "use client";
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import {
   LoginLink,
   LogoutLink,
   RegisterLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 
-const Authenticate = () => {
-  const { isAuthenticated, isLoading } = useKindeBrowserClient();
-  // console.log(isAuthenticated);
-  if (isLoading) return <div>Loading..</div>;
+const Authenticate = ({ isAuthenticated }) => {
   return (
     <div className="flex items-center gap-2">
       {isAuthenticated ? (

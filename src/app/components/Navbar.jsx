@@ -1,7 +1,10 @@
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 import Authenticate from "./Authenticate";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const { getUser, isAuthenticated } = getKindeServerSession();
+  const isUserAuthenticated = await isAuthenticated();
   return (
     <>
       <nav className="bg-teal-800 text-white">
@@ -26,7 +29,7 @@ const Navbar = () => {
           </div>
           {/* right */}
           <>
-            <Authenticate />
+            <Authenticate isAuthenticated={isUserAuthenticated} />
           </>
         </div>
       </nav>
