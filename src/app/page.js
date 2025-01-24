@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <div>
       <h1 className="text-center py-6 text-2xl underline">All Posts</h1>
-      <ul>
+      <ul className="mb-6">
         {posts.map((post, i) => (
           <li
             key={post.id}

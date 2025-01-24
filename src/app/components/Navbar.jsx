@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="container py-2 mx-auto flex items-center justify-between">
           {/* left */}
           <Link href={"/"} className="btn btn-ghost text-xl px-0">
-            LoGO
+            LoGo
           </Link>
           {/* middle */}
           <div className="">
@@ -17,10 +17,10 @@ const Navbar = () => {
                 <Link href={"/"}>Home</Link>
               </li>
               <li>
-                <Link href={"/profile"}>profile</Link>
+                <Link href={"/profile"}>Profile</Link>
               </li>
-              <li>
-                <Link href={"/about us"}>About us</Link>
+              <li className="hidden sm:block">
+                <Link href={"/about-us"}>About us</Link>
               </li>
             </ul>
           </div>
